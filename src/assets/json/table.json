@@ -1,0 +1,109 @@
+{
+  "userName": "akhila",
+  "sheets": [
+    {
+      "sheetName": "sample1",
+      "columns": [
+        {
+          "colName": "id",
+          "dataType": "number",
+          "type":"normal"
+        },
+        {
+          "colName": "heading",
+          "dataType": "string",
+          "type":"textField"
+        },
+        {
+          "colName": "rollNumber",
+          "dataType": "string",
+          "type":"textField"
+        },
+        {
+          "colName": "stream",
+          "dataType": "string",
+          "type":"selectField",
+          "selectOptions":["select any option","CSE","ECE","IT"]
+        },
+        {   
+          "type":"delete"
+        }
+      ],
+
+      "data": [
+        {
+          "heading": "akhila",
+          "id": 1
+        },
+        {
+          "heading": "nikhil",
+          "id": 2
+        },
+        {
+          "heading": "pradeep",
+          "id": 3
+        },
+        {
+          "heading": "karthik",
+          "id": 4
+        }
+      ]
+    },
+    {
+      "sheetName": "sample2",
+      "columns": [
+        {
+          "colName": "id",
+          "dataType": "number",
+          "type":"normal"
+        },
+        {
+          "colName": "name",
+          "dataType": "string",
+          "type":"textField"
+        },
+        {
+          "colName": "branch",
+          "dataType": "string",
+          "type":"selectField",
+          "selectOptions":["select any option","CSE","ECE","IT","EEE"]
+        },
+        {
+          "colName":"collegeName",
+          "dataType":"string",
+          "type":"textField"
+        },
+        {  
+          "type":"delete"
+        }
+      ],
+
+      "data": [
+        {
+          "name": "akhila",
+          "id": 1
+        },
+        {
+          "name": "praneeth",
+          "id": 2
+        },
+        {
+          "name": "srk",
+          "id": 3
+        },
+        {
+          "name": "hari",
+          "id": 4
+        },
+        {
+          "name": "saroja",
+          "id": 5
+        },
+        {
+          "heading": "ravali",
+          "id": 6
+        }
+      ]
+    }
+  ]
+}

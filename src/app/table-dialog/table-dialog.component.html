@@ -1,0 +1,14 @@
+<div class="d-flex flex-column align-items-center p-5">
+    <input class="form-control mb-3" 
+    placeholder="Enter Column Name"
+    (keyup)="changeColumnName($event)"/>
+    <!-- <input class="form-control mb-3" placeholder="Enter DataType of Column Name"/>
+    <input class="form-control mb-3" placeholder="Enter type of an Column Name"/> -->
+    <select class="form-select mb-3" (change)="onChangeDataType($event)">
+        <option *ngFor="let item of dataTypeOptions" >{{item}}</option>
+    </select>
+    <select class="form-select mb-3" (change)="onChangeType($event)">
+        <option *ngFor="let item of typeOptions" >{{item}}</option>
+    </select>
+    <button type="submit" class="btn btn-primary" (click)="Submit()">Submit</button>
+</div>

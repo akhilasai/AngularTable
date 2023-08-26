@@ -74,12 +74,14 @@ export class AppComponent implements OnInit{
       height:'350px',
       width:'500px',
       data: {},
+      disableClose: true
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.service.selectedData().subscribe((data:any)=>{
-        this.sheetTableData.columns.push(data);
-      })
+      this.sheetTableData.columns.push(result);
+      // this.service.selectedData().subscribe((data:any)=>{
+      //   this.sheetTableData.columns.push(data);
+      // })
     });
   }
   deleteRow(id:number){

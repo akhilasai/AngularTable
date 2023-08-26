@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TableServiceService } from '../table-service.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-table-dialog',
@@ -17,7 +18,8 @@ export class TableDialogComponent {
     dataType:'',
     type:''
   }
-  constructor(public service:TableServiceService){
+  constructor(public service:TableServiceService,
+    public dialogRef: MatDialogRef<TableDialogComponent>){
 
   }
   ngOnInit(){
@@ -39,6 +41,9 @@ export class TableDialogComponent {
     this.obj.dataType=this.selectedDataType;
     this.obj.type=this.selectedType
     console.log("obj:",this.obj);
-    this.service.sendDataToTable(this.obj);
+    if(this.obj.colName && this.obj.dataType && this.obj.type){
+      this.dialogRef.close(this.obj);
+    }
+    // this.service.sendDataToTable(this.obj);
   }
 }
